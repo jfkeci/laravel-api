@@ -1,0 +1,9 @@
+{
+    "name": "Simple web blocker",
+    "version": "1.0.0",
+    "description": "Basic website blocker",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
