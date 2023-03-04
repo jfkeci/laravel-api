@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
-            $table->integer('customerId');
+            $table->integer('customer_id');
             $table->string('amount');
             $table->string('status'); // Billed, Paid, Void
-            $table->dateTime('billedDate');
-            $table->dateTime('paidDate')->nullable();
+            $table->dateTime('billed_date');
+            $table->dateTime('paid_date')->nullable();
             $table->timestamps();
         });
     }

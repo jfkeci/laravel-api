@@ -20,11 +20,11 @@ class InvoiceFactory extends Factory
         $status = $this->faker->randomElement(['billed', 'paid', 'void']);
 
         return [
-            'customerId' => Customer::factory(),
+            'customer_id' => Customer::factory(),
             'amount' => $this->faker->numberBetween(100,20000),
             'status' => $status,
-            'billedDate' => $this->faker->dateTimeThisDecade(),
-            'paidDate' => $status === 'paid' ? $this->faker->dateTimeThisDecade() : null,
+            'billed_date' => $this->faker->dateTimeThisDecade(),
+            'paid_date' => $status === 'paid' ? $this->faker->dateTimeThisDecade() : null,
         ];
     }
 }
